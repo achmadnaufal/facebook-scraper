@@ -134,7 +134,7 @@ def write_posts_to_csv(
     if encoding is None:
         encoding = locale.getpreferredencoding()
 
-    with open(filename, 'w', encoding=encoding) as output_file:
+    with open(filename, 'w', encoding="utf-8") as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(list_of_posts)
